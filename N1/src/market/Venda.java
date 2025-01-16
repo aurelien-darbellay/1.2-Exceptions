@@ -1,0 +1,39 @@
+package market;
+
+import exceptions.VendaBuidaException;
+
+import java.util.ArrayList;
+
+public class Venda {
+    private final ArrayList<Producte> products;
+    private double totalValueSale;
+
+    public Venda() {
+        this.products = new ArrayList<Producte>();
+    }
+
+    public Venda(ArrayList<Producte> products) {
+        this.products = products;
+    }
+
+    public ArrayList<Producte> getProducts() {
+        return products;
+    }
+
+    public double getTotalValueSale() {
+        return totalValueSale;
+    }
+
+    public void setTotalValueSale(double totalValueSale) {
+        this.totalValueSale = totalValueSale;
+    }
+
+    public void calcularTotal() throws VendaBuidaException{
+        if (this.products.isEmpty()){throw new VendaBuidaException();}
+        else {
+            for (Producte product: products){
+                this.totalValueSale += product.getPrice();
+            }
+        };
+    }
+}

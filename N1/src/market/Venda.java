@@ -36,4 +36,15 @@ public class Venda {
             }
         };
     }
+
+    public void tryCalculateTotal(){
+        try{
+            calcularTotal();
+            System.out.println(getTotalValueSale());
+        }
+        catch (VendaBuidaException e){
+            System.out.println(e.getMessage());
+        }
+    }
+
 }

@@ -1,3 +1,7 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+# IntelliJ
+/out
+/N1/out
+/N2/out

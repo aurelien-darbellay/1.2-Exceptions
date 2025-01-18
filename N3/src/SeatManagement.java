@@ -30,6 +30,7 @@ public class SeatManagement {
             int found = searchSeat(seat.getRow(), seat.getColumn());
             if (found == -1) {
                 seats.add(seat);
+                System.out.println("Booking done!");
             } else throw new BusySeatException();
         } catch (BusySeatException exception) {
             System.out.println(exception.getMessage());
@@ -42,6 +43,7 @@ public class SeatManagement {
             int found = searchSeat(row, column);
             if (found >= 0) {
                 seats.remove(found);
+                System.out.println("Booking cancelled!");
             } else throw new FreeSeatException();
         } catch (FreeSeatException exception) {
             System.out.println(exception.getMessage());

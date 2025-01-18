@@ -17,4 +17,11 @@ public class Theater {
         this.numColumns = Entry.readInt("How many seats is there in each row in your theater?");
     }
 
+    public int getNumRows() {
+        return numRows;
+    }
+
+    public int getNumColumns() {
+        return numColumns;
+    }
 }

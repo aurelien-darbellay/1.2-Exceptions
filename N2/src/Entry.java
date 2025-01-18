@@ -15,7 +15,7 @@ public class Entry {
                 case "Double" -> type.cast(scanner.nextDouble());
                 case "Float" -> type.cast(scanner.nextFloat());
                 case "Character" -> {
-                    String input = scanner.next();
+                    String input = scanner.nextLine();
                     if (input.length() == 1) {
                         yield type.cast(input.charAt(0));
                     } else {
@@ -37,19 +37,27 @@ public class Entry {
     }
 
     public static byte readByte(String message) {
-        return (Byte) readInput(message, Byte.class);
+        final byte byteOutput = (Byte) readInput(message, Byte.class);
+        scanner.nextLine();
+        return byteOutput;
     }
 
     public static int readInt(String message) {
-        return (Integer) readInput(message, Integer.class);
+        final int intOutput = (Integer) readInput(message, Integer.class);
+        scanner.nextLine();
+        return intOutput;
     }
 
     public static float readFloat(String message) {
-        return (Float) readInput(message, Float.class);
+        final float floatOutput = (Float) readInput(message, Float.class);
+        scanner.nextLine();
+        return floatOutput;
     }
 
     public static double readDouble(String message) {
-        return (Double) readInput(message, Double.class);
+        final double doubleOutput = (Double) readInput(message, Double.class);
+        scanner.nextLine();
+        return doubleOutput;
     }
 
     public static char readChar(String message) {

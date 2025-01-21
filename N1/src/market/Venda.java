@@ -31,6 +31,7 @@ public class Venda {
     public void calcularTotal() throws VendaBuidaException{
         if (this.products.isEmpty()){throw new VendaBuidaException();}
         else {
+            this.totalValueSale = 0;
             for (Producte product: products){
                 this.totalValueSale += product.getPrice();
             }
